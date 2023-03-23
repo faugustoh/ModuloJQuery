@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="./libs/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./libs/owlcarousel/dist/assets/owl.theme.default.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1439712ee9.js" crossorigin="anonymous"></script>
+    
+    <title>Exercício - Módulo 18 - JQuery</title>
+</head>
+<body>
+    <header class="mb-0">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container d-inline-block py-2">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <h1>
+                            <a class="navbar-brand" href="#"><img class="img-fluid" src="./imgs/logo-travel.png" alt="First in Travels" title="First in Travels Logo"></a>
+                        </h1>
+                    </div>
+                    <div class="col-9 text-end">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link disabled">Home</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#sobrenos">Sobre nós</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#roteiros">Destaques</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#roteirosesgotados">Lista de espera</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#contato">Fale conosco</a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="bannerhome" class="position-relative w-100 text-white justify-content-center">
+        <div class="position-absolute mx-auto w-25 p-3 rounded moreinfo">
+            <div id="chamada">
+                <h2 class="fs-3">Prepare-se para momentos inesquecíveis</h2>
+                <p class="mb-0 lh-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita aspernatur maxime itaque. Maxime, quasi nisi dicta, ratione explicabo numquam aut totam.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="roteiros" class="w-100 py-0 py-lg-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 mt-3">Roteiros em Destaque</h2>
+            <div class="owl-carousel owl-theme">
+                <div class="item px-1">            
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-03.jpg" class="img-fluid rounded" title="Coliseo" alt="Coliseo">
+                        <div class="card-body">
+                            <h3 class="destaque">Coliseo</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteiroa"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div>          
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-02.jpg" class="img-fluid rounded" title="Amazônia" alt="Amazônia">
+                        <div class="card-body">
+                            <h3 class="destaque">Amazônia</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteirob"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-01.jpg" class="img-fluid rounded" title="Pirâmides do Egito" alt="Pirâmides do Egito">
+                        <div class="card-body">
+                            <h3 class="destaque">Egito</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteiroc"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-04.jpg" class="img-fluid rounded" title="Rio de Janeiro" alt="Rio de Janeiro">
+                        <div class="card-body">
+                            <h3 class="destaque">Rio de Janeiro</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteirod"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-05.jpg" class="img-fluid rounded" title="Ilha Bela - SP" alt="Ilha Bela - SP">
+                        <div class="card-body">
+                            <h3 class="destaque">Ilha Bela - SP</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteiroe"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-06.jpg" class="img-fluid rounded" title="Monte Fuji" alt="Monte Fuji">
+                        <div class="card-body">
+                            <h3 class="destaque">Monte Fuji</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteirof"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-07.jpg" class="img-fluid rounded" title="Sydney - Austrália" alt="Sydney - Austrália">
+                        <div class="card-body">
+                            <h3 class="destaque">Sydney - Austrália</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteirog"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-08.jpg" class="img-fluid rounded" title="Fortaleza - Ceará" alt="Fortaleza - Ceará">
+                        <div class="card-body">
+                            <h3 class="destaque">Fortaleza - Ceará</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteiroh"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-09.jpg" class="img-fluid rounded" title="New York" alt="New York">
+                        <div class="card-body">
+                            <h3 class="destaque">New York</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#roteiroi"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobrenos" class="container-fluid">
+        <div class="row justify-content-center justify-content-lg-end">
+            <div class="col-11 col-lg-6 col-xl-5 py-5 px-3 ps-lg-5 pe-lg-3  ps-xl-3 order-2 order-lg-1">
+                <h2 class="pt-lg-5 mt-lg-3">Planeje sua viagem com a gente</h2>
+                <p>
+                    Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
+                </p>
+                <h3>
+                    Roteiros incríveis!
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <a class="btn mb-lg-5" href="#contato" role="button"><i class="fa-sharp fa-solid fa-plane-departure"></i><strong> Quero viajar</strong></a>
+            </div>
+            <div class="col-12 col-lg-6 order-1 order-lg-2 firstimg" style="background-image: url(./imgs/full-shot-travel-concept-with-landmarks.png); background-position: center; background-size: cover;">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="roteirosesgotados" class="w-100 py-0 py-lg-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 mt-3">Roteiros Esgotados ou Lista de Espera</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_a" class="card shadow-sm">
+                        <img src="./imgs/trip-03.jpg" class="img-fluid rounded" title="Coliseo" alt="Coliseo">
+                        <div class="card-body">
+                            <h3 class="finished_a">Coliseo</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target=""><i class="fa-regular fa-circle-xmark"></i> Esgotado</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_b" class="card shadow-sm">
+                    <img src="./imgs/trip-02.jpg" class="img-fluid rounded" title="Amazônia" alt="Amazônia">
+                    <div class="card-body">
+                        <h3 class="waitlist">Amazônia</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-outline" data-bs-toggle="modal" data-bs-target="#formularioparaespera"><i class="fa-sharp fa-solid fa-check"></i> Lista de Espera</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_c" class="card shadow-sm">
+                    <img src="./imgs/trip-01.jpg" class="img-fluid rounded" title="Pirâmides do Egito" alt="Pirâmides do Egito">
+                    <div class="card-body">
+                        <h3 class="finished_c">Egito</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target=""><i class="fa-regular fa-circle-xmark"></i> Esgotado</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_d" class="card shadow-sm">
+                    <img src="./imgs/trip-05.jpg" class="img-fluid rounded" title="Ilha Bela - SP" alt="Ilha Bela - SP">
+                    <div class="card-body">
+                        <h3 class="waitlist">Ilha Bela - SP</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-outline" data-bs-toggle="modal" data-bs-target="#formularioparaespera"><i class="fa-sharp fa-solid fa-check"></i> Lista de Espera</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="w-100 py-0 py-lg-5 text-center" style="background-image: url(./imgs/bg-contato.jpg); background-position: center; background-size: cover;">
+        <div class="container justify-content-center pt-5">
+            <h3 class="col-11 col-lg-8 m-auto mb-4 mt-3">Faça já uma cotação!</h3>
+            <p class="col-11 col-lg-8 m-auto lh-sm" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+
+        <div class="container py-5 text-center">
+            <form class="row w-75 justify-content-center m-auto px-lg-5 g-3 pleasefullwidth">
+                <div class="col-11 col-lg-6 m-auto mb-3 text-start">
+                    <label for="validationServer01" class="mb-1 ms-2">Nome:</label>
+                    <input type="text" class="form-control" id="validationServer01" placeholder="Nome" required>                    
+                </div>
+                <div class="col-11 col-lg-6 m-auto mb-3 text-start">
+                    <label for="validationServer02" class="mb-1 ms-2">Sobrenome:</label>
+                    <input type="text" class="form-control" id="validationServer02" placeholder="Sobrenome" required>
+                </div>
+                <div class="col-11 col-lg-8 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="validationServer03" class="mb-1 ms-2">E-mail:</label>
+                    <input type="text" class="form-control" id="validationServer03" placeholder="exemplo@dominio.com" required>
+                </div>
+                <div class="col-11 col-lg-4 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="validationServer04" class="mb-1 ms-2">Fone / WhatsApp:</label>
+                    <input type="text" class="form-control" id="validationServer04" placeholder="(11) 91234-5678" required>
+                </div>
+                <div class="col-11 col-lg-7 m-auto mb-3 text-start">
+                    <label for="validationServer05" class="mb-1 ms-2">Endereço:</label>
+                    <input type="text" class="form-control" id="validationServer05" placeholder="Rua, Avenida, Alamenda..." required>
+                </div>
+                <div class="col-11 col-md-4 col-lg-2 m-auto mb-3 text-start">
+                    <label for="validationServer06" class="mb-1 ms-2">Número:</label>
+                    <input type="text" class="form-control" id="validationServer06" placeholder="Número" required>
+                </div>
+                <div class="col-11 col-md-6 col-lg-3 m-auto mb-3 text-start">
+                    <label for="validationServer07" class="mb-1 ms-2">Complemento:</label>
+                    <input type="text" class="form-control" id="validationServer07" placeholder="Complemento" required>
+                </div>
+                <div class="col-11 col-lg-4 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="validationServer08" class="mb-1 ms-2">Bairro:</label>
+                    <input type="text" class="form-control" id="validationServer08" placeholder="Bairro" required>
+                </div>
+                <div class="col-11 col-lg-3 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="validationServer09" class="mb-1 ms-2">Cidade:</label>
+                    <input type="text" class="form-control" id="validationServer09" placeholder="Cidade" required>
+                </div>
+                <div class="col-11 col-md-3 col-lg-2 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="validationServer10" class="mb-1 ms-2">Estado:</label>
+                    <select class="form-select" id="validationServer10" aria-describedby="validationServer09Feedback" required>
+                        <option selected disabled value="">AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+                <div class="col-11 col-md-7 col-lg-3 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="validationServer11" class="mb-1 ms-2">CEP:</label>
+                    <input type="text" class="form-control" id="validationServer11" placeholder="01234-000" required>
+                </div>
+                <div class="col-11 col-lg-12 m-auto mb-4 text-start">
+                    <label for="validationServer12" class="mb-1 ms-2">Descreva seu roteiro ou destino:</label>
+                    <textarea type="text" class="form-control" rows="3" id="validationServer12" required></textarea>
+                </div>                  
+                <div class="col-11 col-lg-12 m-auto mb-0 text-start">
+                    <button class="btn btn-danger" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="w-100">
+        <div class="container py-5">
+          <ul class="nav justify-content-center pb-3 mb-3" style="border-bottom: 1px solid #333;">
+            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+            <li class="nav-item"><a href="#sobrenos" class="nav-link px-2">Quem Somos</a></li>
+            <li class="nav-item"><a href="#roteiros" class="nav-link px-2">Roteiros</a></li>
+            <li class="nav-item"><a href="#contato" class="nav-link px-2">Contato</a></li>
+          </ul>
+          <p class="text-center">Todos os Direitos Reservados &bull; First in Travels&reg;</p>
+        </div>
+    </footer>
+
+    <!-- Modal Coliseu -->
+    <div class="modal fade" id="roteiroa" tabindex="-1" aria-labelledby="roteiroaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteiroaLabel">Conheça o Coliseu</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-03.jpg" class="img-fluid rounded" title="Coliseo" alt="Coliseo">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Amazônia -->
+    <div class="modal fade" id="roteirob" tabindex="-1" aria-labelledby="roteirobLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteirobLabel">Conheça a Amazônia</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-02.jpg" class="img-fluid rounded" title="Amazônia" alt="Amazônia">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Egito -->
+    <div class="modal fade" id="roteiroc" tabindex="-1" aria-labelledby="roteirocLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteirocLabel">Conheça o Egito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-01.jpg" class="img-fluid rounded" title="Egito" alt="Egito">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Rio de Janeiro -->
+    <div class="modal fade" id="roteirod" tabindex="-1" aria-labelledby="roteirodLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteirodLabel">Conheça o Rio de Janeiro</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-04.jpg" class="img-fluid rounded" title="Rio de Janeiro" alt="Rio de Janeiro">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Ilha Bela -->
+    <div class="modal fade" id="roteiroe" tabindex="-1" aria-labelledby="roteiroeLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteiroeLabel">Conheça Ilha Bela - SP</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-05.jpg" class="img-fluid rounded" title="Ilha Bela" alt="Ilha Bela">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Monte Fuji -->
+    <div class="modal fade" id="roteirof" tabindex="-1" aria-labelledby="roteirofLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteirofLabel">Conheça o Monte Fuji</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-06.jpg" class="img-fluid rounded" title="Monte Fuji" alt="Monte Fuji">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Sydnei -->
+    <div class="modal fade" id="roteirog" tabindex="-1" aria-labelledby="roteirogLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteirogLabel">Conheça Sydney - Austrália</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-07.jpg" class="img-fluid rounded" title="Sydney" alt="Sydney">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Fortaleza -->
+    <div class="modal fade" id="roteiroh" tabindex="-1" aria-labelledby="roteirohLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteirohLabel">Conheça Fortaleza - Ceará</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-08.jpg" class="img-fluid rounded" title="Fortaleza" alt="Fortaleza">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Fortaleza -->
+    <div class="modal fade" id="roteiroi" tabindex="-1" aria-labelledby="roteiroiLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h2 class="modal-title fs-5" id="roteiroiLabel">Conheça New York</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body mb-0">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img src="./imgs/trip-09.jpg" class="img-fluid rounded" title="New York" alt="New York">
+                    </div>
+                    <div class="col">
+                        <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col">
+                        <p class="fw-bold mb-2">Planos</p>
+                    </div>
+                    <div class="col">
+                        <p class="fw-bold mb-2">Pessoas</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="fw-bold mb-2">Valor</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Individual</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">1</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.000,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Casal</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">2</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$1.800,00</p> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-2">Família</p>
+                    </div>
+                    <div class="col">
+                        <p class="mb-2">3 a 5</p> 
+                    </div>
+                    <div class="col text-end">
+                        <p class="mb-2">R$4.500,00</p> 
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal Formulário -->
+    <div class="modal fade" id="formulariodomodal" aria-hidden="true" aria-labelledby="formulariodomodalLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5 px-2" id="formulariodomodalLabel2">Chegou a hora!</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="px-2 lh-sm">Preencha os dados abaixo e aguarde o retorno de um de nossos agentes.</p>
+                <form class="row justify-content-center m-auto g-3 pleasefullwidth">
+                    <div class="col-11 col-lg-12 m-auto mb-3 text-start">
+                        <label for="validationServer01" class="mb-1 ms-2">Nome:</label>
+                        <input type="text" class="form-control" id="validationServer01" placeholder="Nome" required>                    
+                    </div>
+                    <div class="col-11 col-lg-7 m-auto mb-3 text-start">
+                        <label for="validationServer03" class="mb-1 ms-2">E-mail:</label>
+                        <input type="text" class="form-control" id="validationServer03" placeholder="exemplo@dominio.com" required>
+                    </div>
+                    <div class="col-11 col-lg-5 m-auto mb-3 text-start">
+                        <label for="validationServer04" class="mb-1 ms-2">Fone / WhatsApp:</label>
+                        <input type="text" class="form-control" id="validationServer04" placeholder="(11) 91234-5678" required>
+                    </div>
+                    <div class="col-11 col-lg-12 m-auto mb-0 text-start">
+                        <label for="validationServer12" class="mb-1 ms-2">Descreva seu roteiro ou destino:</label>
+                        <textarea type="text" class="form-control" rows="3" id="validationServer12" required></textarea>
+                    </div>
+                    <div class="modal-footer justify-content-start mt-2 px-0" style="border-top: none;">
+                        <button class="btn btn-sm btn-danger" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal Lista de Espera -->
+    <div class="modal fade" id="formularioparaespera" aria-hidden="true" aria-labelledby="formularioparaesperaLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5 px-2" id="formularioparaesperaLabel2">Lista de Espera</h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p class="px-2 lh-sm">Não podemos garantir sua vaga, mas caso ocorra uma desistência, nossos agentes entrarão em contato para efetivar sua reserva.</p>
+                <form class="row justify-content-center m-auto g-3 pleasefullwidth">
+                    <div class="col-11 col-lg-12 m-auto mb-3 text-start">
+                        <label for="validationServer01" class="mb-1 ms-2">Nome:</label>
+                        <input type="text" class="form-control" id="validationServer01" placeholder="Nome" required>                    
+                    </div>
+                    <div class="col-11 col-lg-7 m-auto mb-3 text-start">
+                        <label for="validationServer03" class="mb-1 ms-2">E-mail:</label>
+                        <input type="text" class="form-control" id="validationServer03" placeholder="exemplo@dominio.com" required>
+                    </div>
+                    <div class="col-11 col-lg-5 m-auto mb-3 text-start">
+                        <label for="validationServer04" class="mb-1 ms-2">Fone / WhatsApp:</label>
+                        <input type="text" class="form-control" id="validationServer04" placeholder="(11) 91234-5678" required>
+                    </div>
+                    <div class="col-11 col-lg-12 m-auto mb-0 text-start">
+                        <label for="validationServer12" class="mb-1 ms-2">Descreva seu roteiro ou destino:</label>
+                        <textarea type="text" class="form-control" rows="3" id="validationServer12" required></textarea>
+                    </div>
+                    <div class="modal-footer justify-content-start mt-2 px-0" style="border-top: none;">
+                        <button class="btn btn-sm" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+    <script src="./libs/js/custom.js"></script>
+
+    <script src="./libs/owlcarousel/dist/owl.carousel.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+    });        
+    </script>
+
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:3,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:3500,
+            autoplayHoverPause:true
+        });        
+    </script>
+
+</body>
+</html>
