@@ -1,0 +1,401 @@
+/* Estilos da Módulo 18 */
+
+h1, h2, h3 {
+    color: #e62828;
+}
+
+hr {
+    border-color: #888;
+}
+
+header {
+    background-color: #111;
+}
+
+header img {
+    max-width: 175px !important;
+}
+
+header ul {
+    font-size: 0.85em;
+}
+
+header .container {
+    line-height: 0;
+}
+
+footer {
+    background-color: #111;
+    color: #aaa;
+}
+
+footer .nav-link {
+    color: #aaa;
+}
+
+footer .nav-link:hover {
+    color: #eee;
+}
+
+#bannerhome {
+    height: 75vh;
+    background-image: url(./imgs/banner-principal-a.jpg);
+    background-size: cover;
+}
+
+#bannerhome .moreinfo {
+    background-color: rgba(20, 20, 20, 0.7);
+    right: 9%;
+    bottom: 27%;
+}
+
+#roteiros {
+    background-color: #eee;
+}
+
+#roteiros .destaque {
+    color: #e62828;
+}
+
+#roteiros .owl-dots {
+    margin-top: 2em;
+}
+
+#sobrenos h2 {
+    color: #ff9b00;
+}
+
+#sobrenos h3 {
+    color: #ff9b00;
+}
+
+#sobrenos .btn {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #ff9b00;
+    --bs-btn-border-color: #ff9b00;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d78200;
+    --bs-btn-hover-border-color: #b02a37;
+    --bs-btn-focus-shadow-rgb: 225,83,97;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #d78200;
+    --bs-btn-active-border-color: #a52834;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #ff9b00;
+    --bs-btn-disabled-border-color: #ff9b00;
+}
+
+#sobrenos .firstimg {
+    min-height: 215px;
+}
+
+#specialoffer {
+    background-color: #eee;
+}
+
+#specialoffer h2 {
+    color: #ffc30f;
+}
+
+#specialoffer h3 {
+    color: #777;
+    font-size: 1.25em;
+}
+
+#specialoffer .card {
+    border: 1px solid #ffc30f;
+}
+
+#specialoffer .btn-dark {
+    color: #ffc30f;
+}
+
+#roteirosesgotados {
+    background-color: #eee;
+}
+
+#roteirosesgotados h2,h3 {
+    color: #777;
+}
+
+#roteirosesgotados .waitlist {
+    color: #ff9b00;
+}
+
+#roteirosesgotados .special_box_a {
+    display: none;
+}
+
+#roteirosesgotados .special_box_b {
+    display: none;
+}
+
+#roteirosesgotados .special_box_c {
+    display: none;
+}
+
+#roteirosesgotados .special_box_d {
+    display: none;
+}
+
+#roteirosesgotados_a .finished_a {
+    color: #777;
+    display: inline-block;
+}
+
+#roteirosesgotados_a .overbook_a {
+    color: #000;
+    display: inline-block;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+#roteirosesgotados_b .btn-outline {
+    --bs-btn-color: #ff9b00;
+    --bs-btn-border-color: #ff9b00;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ff9b00;
+    --bs-btn-hover-border-color: #ff9b00;
+    --bs-btn-focus-shadow-rgb: 220,53,69;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ff9b00;
+    --bs-btn-active-border-color: #0082ff5;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #ff9b00;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #ff9b00;
+    --bs-gradient: none;
+}
+
+#roteirosesgotados_c .finished_c {
+    color: #777;
+    display: inline-block;
+}
+
+#roteirosesgotados_c .overbook_c {
+    color: #000;
+    display: inline-block;
+    text-decoration: line-through;
+    cursor: not-allowed;
+}
+
+#roteirosesgotados_d .btn-outline {
+    --bs-btn-color: #ff9b00;
+    --bs-btn-border-color: #ff9b00;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ff9b00;
+    --bs-btn-hover-border-color: #ff9b00;
+    --bs-btn-focus-shadow-rgb: 220,53,69;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ff9b00;
+    --bs-btn-active-border-color: #0082ff5;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #ff9b00;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #ff9b00;
+    --bs-gradient: none;
+}
+
+#formulariooffer h3 {
+    font-size: 1.25em;
+}
+
+#formulariooffer h4 {
+    font-size: 1.25em;
+    color: #e62828 !important;
+}
+
+#formulariooffer p, label, input{
+    font-size: 0.85em;
+}
+
+#formularioparaespera h2 {
+    color: #0082ff;
+}
+
+#formularioparaespera .btn {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #0082ff;
+    --bs-btn-border-color: #0082ff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0069d2;
+    --bs-btn-hover-border-color: #0069d2;
+    --bs-btn-focus-shadow-rgb: 225,83,97;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0069d2;
+    --bs-btn-active-border-color: #0069d2;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0082ff;
+    --bs-btn-disabled-border-color: #0082ff;
+}
+
+.invalid {
+	border-color: #F00;
+}
+
+.text-muted {
+	display: none;
+}
+
+.small, small {
+	font-size: 0.75em;
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        margin-top: 100px;
+    }
+
+    #bannerhome {
+        height: 75vh;
+        background-image: url(./imgs/banner-principal-a.jpg);
+        background-size: cover;
+        background-position-x: -50px;
+    }
+    
+    #bannerhome .moreinfo {
+        background-color: rgba(20, 20, 20, 0.7);
+        left: 5%;
+        bottom: 5%;
+        width: 90% !important;
+    }
+
+    #roteiros h3 {
+        font-size: 0.8em;
+    }
+
+    #roteiros p {
+        display: none;
+    }
+
+    #roteiros i {
+        display: none;
+    }
+
+    #roteiros button {
+        font-size: 0.7em;
+        font-weight: bold;
+        line-height: 1.1em;
+    }
+
+    #roteirosesgotados h2 {
+        font-size: 1.35em;
+    }
+
+   .modal-body {
+    font-size: 0.85em;
+   }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 575px) {
+    body {
+        margin-top: 100px;
+    }
+
+    #bannerhome {
+        height: 75vh;
+        background-image: url(./imgs/banner-principal-a.jpg);
+        background-size: cover;
+        background-position-x: -50px;
+    }
+    
+    #bannerhome .moreinfo {
+        background-color: rgba(20, 20, 20, 0.7);
+        left: 5%;
+        bottom: 5%;
+        width: 90% !important;
+    }
+
+    #roteiros h3 {
+        font-size: 0.8em;
+    }
+
+    #roteiros p {
+        display: none;
+    }
+
+    #roteiros i {
+        display: none;
+    }
+
+    #roteiros button {
+        font-size: 0.7em;
+        font-weight: bold;
+        line-height: 1.1em;
+    }
+
+    .modal-body {
+        font-size: 0.85em;
+       }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #bannerhome {
+        background-position-y: 45px;
+    }
+    
+    #bannerhome .moreinfo {
+        left: 5%;
+        bottom: 5%;
+        width: 90% !important;
+    }
+
+    #roteiros h3 {
+        font-size: 1.1em;
+    }
+
+    #roteiros p {
+        font-size: 0.85em;
+    }
+
+    #roteiros i {
+        display: none;
+    }
+
+    #roteiros button {
+        font-size: 0.85em;
+        line-height: 1.1em;
+    }
+
+    .modal-body {
+        font-size: 0.85em;
+       }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #bannerhome {
+        background-position-y: 60px;
+    }
+    
+    #bannerhome .moreinfo {
+        bottom: 25%;
+        width: 40% !important;
+    }
+
+    #roteirosesgotados h3 {
+        font-size: 1.1em;
+    }
+
+    #roteirosesgotados p {
+        font-size: 0.85em;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #bannerhome {
+        background-position-y: 50px;
+    }
+    
+    #bannerhome .moreinfo {
+        bottom: 25%;
+        width: 40% !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .pleasefullwidth {
+        width: 100% !important;
+    }
+}

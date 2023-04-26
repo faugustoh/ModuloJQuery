@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="./vendor/owl/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/owl/dist/assets/owl.theme.default.min.css">
+
+    <!-- JQuery -->    
+    <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1439712ee9.js" crossorigin="anonymous"></script>
+
+    <title>Exercício - Módulo 19 - JQuery</title>
+</head>
+<body>
+
+    <header class="mb-0">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container d-inline-block py-2">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <h1>
+                            <a class="navbar-brand" href="#"><img class="img-fluid" src="./imgs/logo-travel.png" alt="First in Travels" title="First in Travels Logo"></a>
+                        </h1>
+                    </div>
+                    <div class="col-9 text-end">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link disabled">Home</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#sobrenos">Sobre nós</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#roteiros">Destaques</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#roteirosesgotados">Lista de espera</a>
+                              </li>
+                              <li class="nav-item my-1 my-md-0">
+                                <a class="nav-link" href="#contato">Fale conosco</a>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="bannerhome" class="position-relative w-100 text-white justify-content-center">
+        <div class="position-absolute mx-auto w-25 p-3 rounded moreinfo">
+            <div id="chamada">
+                <h2 class="fs-3">Prepare-se para momentos inesquecíveis</h2>
+                <p class="mb-0 lh-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita aspernatur maxime itaque. Maxime, quasi nisi dicta, ratione explicabo numquam aut totam.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="roteiros" class="w-100 py-0 py-lg-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 mt-3">Roteiros em Destaque</h2>
+            <div class="owl-carousel owl-theme">
+                <div class="item px-1">            
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-03.jpg" class="img-fluid rounded" title="Coliseo" alt="Coliseo">
+                        <div class="card-body">
+                            <h3 class="destaque">Coliseo</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaquecoliseo"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div>          
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-02.jpg" class="img-fluid rounded" title="Amazônia" alt="Amazônia">
+                        <div class="card-body">
+                            <h3 class="destaque">Amazônia</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaqueamazonia"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-01.jpg" class="img-fluid rounded" title="Pirâmides do Egito" alt="Pirâmides do Egito">
+                        <div class="card-body">
+                            <h3 class="destaque">Egito</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaqueegito"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-04.jpg" class="img-fluid rounded" title="Rio de Janeiro" alt="Rio de Janeiro">
+                        <div class="card-body">
+                            <h3 class="destaque">Rio de Janeiro</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaquerio"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-05.jpg" class="img-fluid rounded" title="Ilha Bela - SP" alt="Ilha Bela - SP">
+                        <div class="card-body">
+                            <h3 class="destaque">Ilha Bela - SP</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaqueilhabela"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-06.jpg" class="img-fluid rounded" title="Monte Fuji" alt="Monte Fuji">
+                        <div class="card-body">
+                            <h3 class="destaque">Monte Fuji</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaquemontefuji"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-07.jpg" class="img-fluid rounded" title="Sydney - Austrália" alt="Sydney - Austrália">
+                        <div class="card-body">
+                            <h3 class="destaque">Sydney - Austrália</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaquesydney"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-08.jpg" class="img-fluid rounded" title="Fortaleza - Ceará" alt="Fortaleza - Ceará">
+                        <div class="card-body">
+                            <h3 class="destaque">Fortaleza - Ceará</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaquefortaleza"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="item px-1">
+                    <div class="card shadow-sm">
+                        <img src="./imgs/trip-09.jpg" class="img-fluid rounded" title="New York" alt="New York">
+                        <div class="card-body">
+                            <h3 class="destaque">New York</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-danger nav-modal-open" rel="destaquenewyork"><i class="fa-sharp fa-solid fa-check"></i> Quero reservar</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobrenos" class="container-fluid">
+        <div class="row justify-content-center justify-content-lg-end">
+            <div class="col-11 col-lg-6 col-xl-5 py-5 px-3 ps-lg-5 pe-lg-3  ps-xl-3 order-2 order-lg-1">
+                <h2 class="pt-lg-5 mt-lg-3">Planeje sua viagem com a gente</h2>
+                <p>
+                    Richard McClintock, a Latin scholar from Hampden-Sydney College, is credited with discovering the source behind the ubiquitous filler text. In seeing a sample of lorem ipsum, his interest was piqued by consectetur—a genuine, albeit rare, Latin word. Consulting a Latin dictionary led McClintock to a passage from De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”), a first-century B.C. text from the Roman philosopher Cicero.
+                </p>
+                <h3>
+                    Roteiros incríveis!
+                </h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <a class="btn mb-lg-5" href="#contato" role="button"><i class="fa-sharp fa-solid fa-plane-departure"></i><strong> Quero viajar</strong></a>
+            </div>
+            <div class="col-12 col-lg-6 order-1 order-lg-2 firstimg" style="background-image: url(./imgs/full-shot-travel-concept-with-landmarks.png); background-position: center; background-size: cover;">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="specialoffer" class="w-100 py-0 py-lg-5" style="background-color: #111;">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 mt-3">Ofertas Especiais!</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                <div class="col-12 col-sm-6 col-md">
+                    <div class="card shadow-sm text-center">
+                        <img src="./imgs/trip-03.jpg" class="img-fluid rounded m-auto" title="Monte Fuji" alt="Monte Fuji">
+                        <div class="card-body text-start">
+                            <h3>Monte Fuji [50% OFF]</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-dark nav-modal-open" rel="ofertafuji"><i class="fa-sharp fa-solid fa-check"></i> Personalize seu Roteiro</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div class="card shadow-sm text-center">
+                    <img src="./imgs/trip-02.jpg" class="img-fluid rounded m-auto" title="Sydney" alt="Sydney">
+                    <div class="card-body text-start">
+                        <h3>Sydney [30% OFF]</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-dark nav-modal-open" rel="ofertasydney"><i class="fa-sharp fa-solid fa-check"></i> Personalize seu Roteiro</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div class="card shadow-sm text-center">
+                    <img src="./imgs/trip-01.jpg" class="img-fluid rounded m-auto" title="New York" alt="New York">
+                    <div class="card-body text-start">
+                        <h3>New York [10% OFF]</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-dark nav-modal-open" rel="ofertanewyork"><i class="fa-sharp fa-solid fa-check"></i> Personalize seu Roteiro</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div class="card shadow-sm text-center">
+                    <img src="./imgs/trip-05.jpg" class="img-fluid rounded m-auto" title="Rio de Janeiro" alt="Rio de Janeiro">
+                    <div class="card-body text-start">
+                        <h3>Rio de Janeiro [70% OFF]</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-dark nav-modal-open" rel="ofertario"><i class="fa-sharp fa-solid fa-check"></i> Personalize seu Roteiro</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roteirosesgotados" class="w-100 py-0 py-lg-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5 mt-3">Roteiros Esgotados ou Lista de Espera</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_a" class="card shadow-sm text-center">
+                        <img src="./imgs/trip-03.jpg" class="img-fluid rounded m-auto special_box_a" title="Coliseo" alt="Coliseo">
+                        <div class="card-body">
+                            <h3 class="finished_a">Coliseo</h3>
+                            <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target=""><i class="fa-regular fa-circle-xmark"></i> Esgotado</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_b" class="card shadow-sm text-center">
+                    <img src="./imgs/trip-02.jpg" class="img-fluid rounded m-auto special_box_b" title="Amazônia" alt="Amazônia">
+                    <div class="card-body">
+                        <h3 class="waitlist">Amazônia</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-outline nav-modal-open" rel="esperaamazonia"><i class="fa-sharp fa-solid fa-check"></i> Lista de Espera</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_c" class="card shadow-sm text-center">
+                    <img src="./imgs/trip-01.jpg" class="img-fluid rounded m-auto special_box_c" title="Pirâmides do Egito" alt="Pirâmides do Egito">
+                    <div class="card-body">
+                        <h3 class="finished_c">Egito</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target=""><i class="fa-regular fa-circle-xmark"></i> Esgotado</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md">
+                    <div id="roteirosesgotados_d" class="card shadow-sm text-center">
+                    <img src="./imgs/trip-05.jpg" class="img-fluid rounded m-auto special_box_d" title="Ilha Bela - SP" alt="Ilha Bela - SP">
+                    <div class="card-body">
+                        <h3 class="waitlist">Ilha Bela - SP</h3>
+                        <p class="card-text lh-sm">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <button type="button" class="btn btn-sm btn-outline nav-modal-open" rel="esperailhabela"><i class="fa-sharp fa-solid fa-check"></i> Lista de Espera</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="w-100 py-0 py-lg-5 text-center" style="background-image: url(./imgs/bg-contato.jpg); background-position: center; background-size: cover;">
+        <div class="container justify-content-center pt-5">
+            <h3 class="col-11 col-lg-8 m-auto mb-4 mt-3">Faça já uma cotação!</h3>
+            <p class="col-11 col-lg-8 m-auto lh-sm" style="text-align: justify;">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+        </div>
+
+        <div class="container py-5 text-center">
+            <form class="form row w-75 justify-content-center m-auto px-lg-5 g-3 pleasefullwidth">
+                <div class="col-11 col-lg-8 m-auto mb-3 text-start">
+                    <label for="newcontatoname" class="mb-1 ms-2">Nome completo:</label>
+                    <input type="text" class="form-control" name="newcontatoname" id="newcontatoname" placeholder="Evite abreviações" required>                     
+                </div>
+                <div class="col-11 col-lg-4 m-auto mb-3 text-start">
+                    <label for="newcontatocpf" class="mb-1 ms-2">CPF:</label>
+                    <input type="text" class="form-control newcontatocpf" name="newcontatocpf" id="newcontatocpf" placeholder="Apenas números" required>
+                </div>
+                <div class="col-11 col-lg-8 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="newcontatoemail" class="mb-1 ms-2">E-mail:</label>
+                    <input type="email" class="form-control" name="newcontatoemail" id="newcontatoemail" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                </div>
+                <div class="col-11 col-lg-4 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="newcontatonumber" class="mb-1 ms-2">Fone / WhatsApp:</label>
+                    <input type="text" class="form-control newcontatonumber" name="newcontatonumber" id="newcontatonumber" placeholder="(11) 91234-5678" required>
+                </div>
+                <div class="col-11 col-lg-7 m-auto mb-3 text-start">
+                    <label for="newcontatoendereco" class="mb-1 ms-2">Endereço:</label>
+                    <input type="text" class="form-control" name="newcontatoendereco" id="newcontatoendereco" placeholder="Rua, Avenida, Alamenda..." required>
+                </div>
+                <div class="col-11 col-md-4 col-lg-2 m-auto mb-3 text-start">
+                    <label for="newcontatonum" class="mb-1 ms-2">Número:</label>
+                    <input type="text" class="form-control" name="newcontatonum" id="newcontatonum" placeholder="Número" required>
+                </div>
+                <div class="col-11 col-md-6 col-lg-3 m-auto mb-3 text-start">
+                    <label for="newcontatocomp" class="mb-1 ms-2">Complemento:</label>
+                    <input type="text" class="form-control" name="newcontatocomp" id="newcontatocomp" placeholder="Complemento" required>
+                </div>
+                <div class="col-11 col-lg-4 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="newcontatobairro" class="mb-1 ms-2">Bairro:</label>
+                    <input type="text" class="form-control" name="newcontatobairro" id="newcontatobairro" placeholder="Bairro" required>
+                </div>
+                <div class="col-11 col-lg-3 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="newcontatocity" class="mb-1 ms-2">Cidade:</label>
+                    <input type="text" class="form-control" name="newcontatocity" id="newcontatocity" placeholder="Cidade" required>
+                </div>
+                <div class="col-11 col-md-3 col-lg-2 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="newcontatostate" class="mb-1 ms-2">Estado:</label>
+                    <select class="form-select" name="newcontatostate" id="newcontatostate" aria-describedby="validationServer09Feedback" required>
+                        <option selected disabled value="">AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+                <div class="col-11 col-md-7 col-lg-3 m-auto mb-3 mb-lg-5 text-start">
+                    <label for="newcontatocep" class="mb-1 ms-2">CEP:</label>
+                    <input type="text" class="form-control newcontatocep" name="newcontatocep" id="newcontatocep" placeholder="01234-000" required>
+                </div>
+                <div class="col-11 col-lg-12 m-auto mb-4 text-start">
+                    <label for="newcontatodestino" class="mb-1 ms-2">Descreva seu roteiro ou destino:</label>
+                    <textarea type="text" class="form-control" rows="3" name="newcontatodestino" id="newcontatodestino" required></textarea>
+                </div>                  
+                <div class="col-11 col-lg-12 m-auto mb-0 text-start">
+                    <button class="btn btn-danger" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="w-100">
+        <div class="container py-5">
+          <ul class="nav justify-content-center pb-3 mb-3" style="border-bottom: 1px solid #333;">
+            <li class="nav-item"><a href="#" class="nav-link px-2">Home</a></li>
+            <li class="nav-item"><a href="#sobrenos" class="nav-link px-2">Quem Somos</a></li>
+            <li class="nav-item"><a href="#roteiros" class="nav-link px-2">Roteiros</a></li>
+            <li class="nav-item"><a href="#contato" class="nav-link px-2">Contato</a></li>
+          </ul>
+          <p class="text-center">Todos os Direitos Reservados &bull; First in Travels&reg;</p>
+        </div>
+    </footer>
+
+    <!-- Modal Ofertas Especiais -->
+    <div class="modal fade" id="formulariooffer" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-white" style="background-color: #ff9b00;">
+                    <h3 class="modal-title text-white">Modal title</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">              
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ofertafuji" class="visually-hidden">
+        <h4 class="mb-1">Conheça o Monte Fuji</h4>
+        <p class="lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <form action="post" class="form row justify-content-between m-auto g-3 pleasefullwidth">
+            <div class="col-11 col-lg-12 m-auto mx-0 mb-3 px-0 text-start">
+                <label for="fujiname" class="mb-0 ms-1">Nome Completo:</label>
+                <input type="text" class="form-control newname" name="fujiname" id="fujiname" aria-describedby="helpNome">
+                <small id="helpNome" class="text-muted">Este campo não pode ficar em branco</small>                    
+            </div>
+            <div class="col-11 col-lg-6 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="fujiemail" class="mb-0 ms-1">E-mail:</label>
+                <input type="email" class="form-control newemail" name="fujiemail" id="fujiemail" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">Este campo não pode ficar em branco</small>
+            </div>
+            <div class="col-11 col-lg-5 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="fujinumber" class="mb-0 ms-1">Fone / WhatsApp:</label>
+                <input type="text" class="form-control newnumber" name="fujinumber" id="fujinumber" placeholder="(11) 91234-5678" aria-describedby="helpNumber">
+                <small id="helpNumber" class="text-muted">Digite corretamente</small>
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="fujiboarding" class="mb-0 ms-1">Embarque:</label>
+                <input type="text" class="form-control newdatepicker" name="fujiboarding" id="fujiboarding" placeholder="Data" aria-describedby="helpBoarding">
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="fujiarrival" class="mb-0 ms-1">Retorno:</label>
+                <input type="text" class="form-control newdatepicker" name="fujiarrival" id="fujiarrival" placeholder="Data" aria-describedby="helpArrival">
+            </div>
+            <div class="col-11 col-lg-4 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="fujipassenger" class="mb-0 ms-1">Qtde. Passageiros:</label>
+                <select class="form-select" name="fujipassenger" id="fujipassenger" aria-describedby="helpPassenger">
+                    <option selected disabled value="">Escolha:</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>+ de 10</option>
+                </select>
+            </div>
+            <div class="modal-footer justify-content-start mt-0 px-0 pt-0" style="border-top: none;">
+                <button class="btn btn-sm btn-dark" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="ofertasydney" class="visually-hidden">
+        <h4 class="mb-1">Conheça o Sydney - Austrália</h4>
+        <p class="lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <form action="post" class="form row justify-content-between m-auto g-3 pleasefullwidth">
+            <div class="col-11 col-lg-12 m-auto mx-0 mb-3 px-0 text-start">
+                <label for="sydneyname" class="mb-0 ms-1">Nome Completo:</label>
+                <input type="text" class="form-control newname" name="sydneyname"  id="sydneyname" aria-describedby="helpNome">
+                <small id="helpNome" class="text-muted">Este campo não pode ficar em branco</small>                    
+            </div>
+            <div class="col-11 col-lg-6 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="sydneyemail" class="mb-0 ms-1">E-mail:</label>
+                <input type="email" class="form-control newemail" name="sydneyemail" id="sydneyemail" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">Este campo não pode ficar em branco</small>
+            </div>
+            <div class="col-11 col-lg-5 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="sydneynumber" class="mb-0 ms-1">Fone / WhatsApp:</label>
+                <input type="text" class="form-control newnumber" name="sydneynumber" id="sydneynumber" placeholder="(11) 91234-5678" aria-describedby="helpNumber">
+                <small id="helpNumber" class="text-muted">Digite corretamente</small>
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="sydneyboarding" class="mb-0 ms-1">Embarque:</label>
+                <input type="text" class="form-control newdatepicker" name="sydneyboarding" id="sydneyboarding" placeholder="Data" aria-describedby="helpBoarding">
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="sydneyarrival" class="mb-0 ms-1">Retorno:</label>
+                <input type="text" class="form-control newdatepicker" name="sydneyarrival" id="sydneyarrival" placeholder="Data" aria-describedby="helpArrival">
+            </div>
+            <div class="col-11 col-lg-4 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="sydneypassenger" class="mb-0 ms-1">Qtde. Passageiros:</label>
+                <select class="form-select" name="sydneypassenger" id="sydneypassenger" aria-describedby="helpPassenger">
+                    <option selected disabled value="">Escolha:</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>+ de 10</option>
+                </select>
+            </div>
+            <div class="modal-footer justify-content-start mt-0 px-0 pt-0" style="border-top: none;">
+                <button class="btn btn-sm btn-dark" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="ofertanewyork" class="visually-hidden">
+        <h4 class="mb-1">Conheça o New York</h4>
+        <p class="lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <form action="post" class="form row justify-content-between m-auto g-3 pleasefullwidth">
+            <div class="col-11 col-lg-12 m-auto mx-0 mb-3 px-0 text-start">
+                <label for="newyorkname" class="mb-0 ms-1">Nome Completo:</label>
+                <input type="text" class="form-control newname" name="newyorkname"  id="newyorkname" aria-describedby="helpNome">
+                <small id="helpNome" class="text-muted">Este campo não pode ficar em branco</small>                    
+            </div>
+            <div class="col-11 col-lg-6 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="newyorkemail" class="mb-0 ms-1">E-mail:</label>
+                <input type="email" class="form-control newemail" name="newyorkemail" id="newyorkemail" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">Este campo não pode ficar em branco</small>
+            </div>
+            <div class="col-11 col-lg-5 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="newyorknumber" class="mb-0 ms-1">Fone / WhatsApp:</label>
+                <input type="text" class="form-control newnumber" name="newyorknumber" id="newyorknumber" placeholder="(11) 91234-5678" aria-describedby="helpNumber">
+                <small id="helpNumber" class="text-muted">Digite corretamente</small>
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="newyorkboarding" class="mb-0 ms-1">Embarque:</label>
+                <input type="text" class="form-control newdatepicker" name="newyorkboarding" id="newyorkboarding" placeholder="Data" aria-describedby="helpBoarding">
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="newyorkarrival" class="mb-0 ms-1">Retorno:</label>
+                <input type="text" class="form-control newdatepicker" name="newyorkarrival" id="newyorkarrival" placeholder="Data" aria-describedby="helpArrival">
+            </div>
+            <div class="col-11 col-lg-4 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="newyorkpassenger" class="mb-0 ms-1">Qtde. Passageiros:</label>
+                <select class="form-select" name="newyorkpassenger" id="newyorkpassenger" aria-describedby="helpPassenger">
+                    <option selected disabled value="">Escolha:</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>+ de 10</option>
+                </select>
+            </div>
+            <div class="modal-footer justify-content-start mt-0 px-0 pt-0" style="border-top: none;">
+                <button class="btn btn-sm btn-dark" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="ofertario" class="visually-hidden">
+        <h4 class="mb-1">Conheça o Rio de Janeiro</h4>
+        <p class="lh-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <form action="post" class="form row justify-content-between m-auto g-3 pleasefullwidth">
+            <div class="col-11 col-lg-12 m-auto mx-0 mb-3 px-0 text-start">
+                <label for="rioname" class="mb-0 ms-1">Nome Completo:</label>
+                <input type="text" class="form-control newname" name="rioname"  id="rioname" aria-describedby="helpNome">
+                <small id="helpNome" class="text-muted">Este campo não pode ficar em branco</small>                    
+            </div>
+            <div class="col-11 col-lg-6 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="rioemail" class="mb-0 ms-1">E-mail:</label>
+                <input type="email" class="form-control newemail" name="rioemail" id="rioemail" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">Este campo não pode ficar em branco</small>
+            </div>
+            <div class="col-11 col-lg-5 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="rionumber" class="mb-0 ms-1">Fone / WhatsApp:</label>
+                <input type="text" class="form-control newnumber" name="rionumber" id="rionumber" placeholder="(11) 91234-5678" aria-describedby="helpNumber">
+                <small id="helpNumber" class="text-muted">Digite corretamente</small>
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="rioboarding" class="mb-0 ms-1">Embarque:</label>
+                <input type="text" class="form-control newdatepicker" name="rioboarding" id="rioboarding" placeholder="Data" aria-describedby="helpBoarding">
+            </div>
+            <div class="col-11 col-lg-3 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="rioarrival" class="mb-0 ms-1">Retorno:</label>
+                <input type="text" class="form-control newdatepicker" name="rioarrival" id="rioarrival" placeholder="Data" aria-describedby="helpArrival">
+            </div>
+            <div class="col-11 col-lg-4 mt-0 mx-0 mb-3 px-0 text-start">
+                <label for="riopassenger" class="mb-0 ms-1">Qtde. Passageiros:</label>
+                <select class="form-select" name="riopassenger" id="riopassenger" aria-describedby="helpPassenger">
+                    <option selected disabled value="">Escolha:</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>+ de 10</option>
+                </select>
+            </div>
+            <div class="modal-footer justify-content-start mt-0 px-0 pt-0" style="border-top: none;">
+                <button class="btn btn-sm btn-dark" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Lista de Espera -->
+    <div id="esperaamazonia" class="visually-hidden">
+        <h4 class="mb-1">:: Amazônia</h4>
+        <p class="px-2 lh-sm">Não podemos garantir sua vaga, mas caso ocorra uma desistência, nossos agentes entrarão em contato para efetivar sua reserva.</p>
+        <form class="form row justify-content-center m-auto g-3 pleasefullwidth">
+            <div class="col-11 col-lg-12 m-auto mb-3 text-start">
+                <label for="listanameamazonia" class="mb-1 ms-2">Nome:</label>
+                <input type="text" class="form-control newname" name="listanameamazonia" id="listanameamazonia1" placeholder="Nome" aria-describedby="helpNomeListaAmazonia">
+                <small id="helpNomeListaAmazonia" class="text-muted">Este campo não pode ficar em branco</small>                    
+            </div>
+            <div class="col-11 col-lg-7 m-auto mb-3 text-start">
+                <label for="listaemailamazonia" class="mb-1 ms-2">E-mail:</label>
+                <input type="email" class="form-control newemail" name="listaemailamazonia" id="listaemailamazonia" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" aria-describedby="helpEmailListaAmazonia">
+                <small id="helpEmailListaAmazonia" class="text-muted">Este campo não pode ficar em branco</small> 
+            </div>
+            <div class="col-11 col-lg-5 m-auto mb-3 text-start">
+                <label for="listanumberamazonia" class="mb-1 ms-2">Fone / WhatsApp:</label>
+                <input type="text" class="form-control newnumber" name="listanumberamazonia" id="listanumberamazonia" placeholder="(11) 91234-5678" aria-describedby="helpNumberListaAmazonia">
+                <small id="helpNumberListaAmazonia" class="text-muted">Campo obrigatório</small>
+            </div>
+            <div class="col-11 col-lg-12 m-auto mb-0 text-start">
+                <label for="validationServer12" class="mb-1 ms-2">Descreva seu roteiro ou destino:</label>
+                <textarea type="text" class="form-control" rows="3" id="validationServer12" required></textarea>
+            </div>
+            <div class="modal-footer justify-content-start mt-2 px-0" style="border-top: none;">
+                <button class="btn btn-sm btn-dark" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="esperailhabela" class="visually-hidden">
+        <h4 class="mb-1">:: Ilha Bela</h4>
+        <p class="px-2 lh-sm">Não podemos garantir sua vaga, mas caso ocorra uma desistência, nossos agentes entrarão em contato para efetivar sua reserva.</p>
+        <form class="form row justify-content-center m-auto g-3 pleasefullwidth">
+            <div class="col-11 col-lg-12 m-auto mb-3 text-start">
+                <label for="validationServer01" class="mb-1 ms-2">Nome:</label>
+                <input type="text" class="form-control newname" id="validationServer01" placeholder="Nome" aria-describedby="helpNomeListaIlha">
+                <small id="helpNomeListaIlha" class="text-muted">Este campo não pode ficar em branco</small>                    
+            </div>
+            <div class="col-11 col-lg-7 m-auto mb-3 text-start">
+                <label for="validationServer03" class="mb-1 ms-2">E-mail:</label>
+                <input type="email" class="form-control newemail" id="validationServer03" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" aria-describedby="helpEmailListaIlha">
+                <small id="helpEmailListaIlha" class="text-muted">Este campo não pode ficar em branco</small>
+            </div>
+            <div class="col-11 col-lg-5 m-auto mb-3 text-start">
+                <label for="validationServer04" class="mb-1 ms-2">Fone / WhatsApp:</label>
+                <input type="text" class="form-control newnumber" id="validationServer04" placeholder="(11) 91234-5678" aria-describedby="helpNumberListaIlha">
+                <small id="helpNumberListaIlha" class="text-muted">Campo Obrigatório</small>
+            </div>
+            <div class="col-11 col-lg-12 m-auto mb-0 text-start">
+                <label for="validationServer12" class="mb-1 ms-2">Descreva seu roteiro ou destino:</label>
+                <textarea type="text" class="form-control" rows="3" id="validationServer12" required></textarea>
+            </div>
+            <div class="modal-footer justify-content-start mt-2 px-0" style="border-top: none;">
+                <button class="btn btn-sm btn-dark" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Coliseo -->
+    <div id="destaquecoliseo" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-03.jpg" class="img-fluid rounded" title="Coliseo" alt="Coliseo">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5">Conheça o Coliseu</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Amazônia -->
+    <div id="destaqueamazonia" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-02.jpg" class="img-fluid rounded" title="Amazônia" alt="Amazônia">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5  lh-1 mb-2">Conheça a Amazônia</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Egito -->
+    <div id="destaqueegito" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-01.jpg" class="img-fluid rounded" title="Egito" alt="Egito">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5  lh-1 mb-2">Conheça o Egito</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Rio de Janeiro -->
+    <div id="destaquerio" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-04.jpg" class="img-fluid rounded" title="Rio de Janeiro" alt="Rio de Janeiro">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5 lh-1 mb-2">Conheça o Rio de Janeiro</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Ilha Bela -->
+    <div id="destaqueilhabela" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-05.jpg" class="img-fluid rounded" title="Ilha Bela" alt="Ilha Bela">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5 lh-1 mb-2">Conheça Ilha Bela</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Monte Fuji -->
+    <div id="destaquemontefuji" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-06.jpg" class="img-fluid rounded" title="Monte Fuji" alt="Monte Fuji">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5 lh-1 mb-2">Conheça o Monte Fuji</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Sydney -->
+    <div id="destaquesydney" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-07.jpg" class="img-fluid rounded" title="Sydney" alt="Sydney">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5 lh-1 mb-2">Conheça Sydney - Austrália</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque Fortaleza -->
+    <div id="destaquefortaleza" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-08.jpg" class="img-fluid rounded" title="Fortaleza" alt="Fortaleza">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5 lh-1 mb-2">Conheça Fortaleza - Ceará</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Roteiros em Destaque New York -->
+    <div id="destaquenewyork" class="visually-hidden">
+        <div class="row align-items-center">
+            <div class="col">
+                <img src="./imgs/trip-09.jpg" class="img-fluid rounded" title="New York" alt="New York">
+            </div>
+            <div class="col">
+                <h2 class="modal-title fs-5 lh-1 mb-2">Conheça New York</h2>
+                <p class="lh-sm mb-0">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> 
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2">Planos</p>
+            </div>
+            <div class="col">
+                <p class="fw-bold mb-2">Pessoas</p> 
+            </div>
+            <div class="col text-end">
+                <p class="fw-bold mb-2">Valor</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Individual</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">1</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.000,00</p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="mb-2">Casal</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">2</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$1.800,00</p> 
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <p class="mb-2">Família</p>
+            </div>
+            <div class="col">
+                <p class="mb-2">3 a 5</p> 
+            </div>
+            <div class="col text-end">
+                <p class="mb-2">R$4.500,00</p> 
+            </div>
+        </div>
+        <button class="btn btn-sm btn-outline-danger" data-bs-target="#formulariodomodal" data-bs-toggle="modal" data-bs-dismiss="modal"><strong>Reserve agora, sem compromisso!</strong></button>
+    </div>
+
+    <!-- Modal Formulário -->
+    <div class="modal fade" id="formulariodomodal" aria-hidden="true" aria-labelledby="formulariodomodalLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5 px-2" id="formulariodomodalLabel2">Chegou a hora!</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="container">
+                    <p class="px-2 mt-3 mb-2 lh-sm" style="font-size: 0.95em;">Preencha os dados abaixo e aguarde o retorno de um de nossos agentes.</p>
+                    <form class="row justify-content-center m-auto g-3 pleasefullwidth">
+                        <div class="col-11 col-lg-12 m-auto mb-3 text-start">
+                            <label for="validationServer01" class="mb-1 ms-2">Nome:</label>
+                            <input type="text" class="form-control" id="validationServer01" placeholder="Nome" required>                    
+                        </div>
+                        <div class="col-11 col-lg-7 m-auto mb-3 text-start">
+                            <label for="validationServer03" class="mb-1 ms-2">E-mail:</label>
+                            <input type="email" class="form-control" id="validationServer03" placeholder="exemplo@dominio.com" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" required>
+                        </div>
+                        <div class="col-11 col-lg-5 m-auto mb-3 text-start">
+                            <label for="validationServer04" class="mb-1 ms-2">Fone / WhatsApp:</label>
+                            <input type="text" class="form-control newcontatonumber" id="validationServer04" placeholder="(11) 91234-5678" required>
+                        </div>
+                        <div class="col-11 col-lg-12 m-auto mb-0 text-start">
+                            <label for="validationServer12" class="mb-1 ms-2">Descreva seu roteiro ou destino:</label>
+                            <textarea type="text" class="form-control" rows="3" id="validationServer12" required></textarea>
+                        </div>
+                        <div class="modal-footer justify-content-start mt-2 px-0" style="border-top: none;">
+                            <button class="btn btn-sm btn-danger" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vendor Scripts -->
+    <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+    
+    <script src="./vendor/jquery-mask/jquery.mask.min.js"></script>
+    <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
+
+    <script src="./vendor/owl/dist/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".owl-carousel").owlCarousel();
+        });        
+    </script>
+
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:3,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:3500,
+            autoplayHoverPause:true
+        });        
+    </script>
+    
+
+    <!-- CDN Scripts -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Scripts Personalizados -->
+    <script src="./js/custom.js"></script>
+</body>
+</html>
